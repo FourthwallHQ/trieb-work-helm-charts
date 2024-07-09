@@ -56,7 +56,9 @@ spec:
             - name: CONTAINER_CONFIG
               value: {{ .Values.gtm.containerSettings }}
             - name: PREVIEW_SERVER_URL
-              value: "https://{{ $taggingHost }}"    
+              value: "https://{{ $taggingHost }}"
+            - name: GOOGLE_CLOUD_PROJECT
+              value: {{ .Values.env.GOOGLE_CLOUD_PROJECT }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

@@ -71,6 +71,9 @@ autoscaling:
 gtm:
   containerSettings:
 
+env:
+  GOOGLE_CLOUD_PROJECT: ""
+
 nodeSelector: {}
 
 tolerations: []
