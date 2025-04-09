@@ -67,6 +67,14 @@ autoscaling:
   maxReplicas: 3
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
+  customMetrics: {}
+#    - type: Pods
+#      pods:
+#        metric:
+#          name: istio_request_rate
+#        target:
+#          type: AverageValue
+#          averageValue: "60000m"
 
 gtm:
   containerSettings:
